@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fany Boggino · Coaching ejecutivo, liderazgo, assessment y transición profesional</title>
+<meta name="description" content="Fany Boggino, coach ejecutiva ICF ACC en Barcelona. Programas de liderazgo, coaching ejecutivo, assessment y transición profesional (outplacement y newplacement) para empresas y profesionales.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232f4a52'/%3E%3Cg transform='translate(14 18) scale(.6)'%3E%3Cpolygon points='58,50 6,8 18,52' fill='%23f3f6f9'/%3E%3Cpolygon points='62,50 114,8 102,52' fill='%23f3f6f9'/%3E%3Cpolygon points='58,54 22,58 36,92' fill='%239bbfcb'/%3E%3Cpolygon points='62,54 98,58 84,92' fill='%239bbfcb'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#2f4a52; --deeper:#263d44; --mid:#6e858b; --sky:#9bbfcb; --mist:#c7dae2;
+    --agua:#e4eef2; --piedra:#eceff0; --bg:#f3f6f9; --surface:#ffffff;
+    --ink:#22353b; --muted:#566a70; --line:#d3d8d9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;line-height:1.7;font-size:16.5px}
+  a{color:var(--deep)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-weight:400;line-height:1.25}
+  h2{font-size:clamp(1.65rem,3.2vw,2.25rem);color:var(--deep);margin-bottom:.55em}
+  h3{font-weight:500;color:var(--deep)}
+  p{max-width:65ch}
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);margin-bottom:1em}
+  .lead{font-size:1.06rem;color:var(--muted);font-weight:300}
+  section{padding:92px 0}
+  .band-agua{background:var(--agua)} .band-piedra{background:var(--piedra)} .band-white{background:var(--surface)}
+  .head{margin-bottom:44px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  ul.clean{list-style:none;display:grid;gap:.55rem}
+  ul.clean li{padding-left:1.5rem;position:relative}
+  ul.clean li::before{content:"";position:absolute;left:0;top:.62em;border-left:8px solid var(--sky);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .tags span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--deep);color:var(--deep);padding:5px 11px}
+  .note{margin-top:30px;font-style:italic;color:var(--muted);font-size:.95rem}
+
+  /* botones */
+  .btn{display:inline-block;background:var(--deep);color:#fff!important;text-decoration:none;padding:14px 26px;border-radius:2px;font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,transform .2s;border:1px solid var(--deep);cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--deeper);transform:translateY(-1px)}
+  .btn.light{background:#fff;color:var(--deep)!important;border-color:#fff}
+  .btn.light:hover{background:var(--mist)}
+  .btn.ghost{background:transparent;color:var(--deep)!important}
+  .btn.ghost:hover{background:var(--agua)}
+  .btn.ghost-light{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.55)}
+  .btn.ghost-light:hover{background:rgba(255,255,255,.08)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+  .tile{display:inline-flex;align-items:center;justify-content:center;background:var(--deep);flex:none}
+  .tile svg{width:62%;height:auto}
+  .tile.edge{outline:1px solid rgba(199,218,226,.45);outline-offset:-1px}
+  /* cabecera */
+  header{position:sticky;top:0;z-index:10;background:rgba(47,74,82,.97);backdrop-filter:blur(8px);color:#fff}
+  nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:600;letter-spacing:.22em;font-size:.86rem;text-transform:uppercase;white-space:nowrap}
+  
+  .links{display:flex;gap:26px;align-items:center}
+  .links a{text-decoration:none;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+  .links a:hover{color:#fff}
+  .links .btn{padding:10px 18px;font-size:.72rem}
+
+  /* hero */
+  .hero{background:var(--deep);color:#fff;padding:96px 0 104px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .hero-art svg{width:100%;max-width:470px;height:auto;display:block;margin:0 auto}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.15}
+  .rule{height:1px;background:rgba(199,218,226,.35);margin:22px 0}
+  .hero .name{font-weight:600;letter-spacing:.26em;text-transform:uppercase;font-size:.9rem}
+  .hero .svc{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sky);margin-top:10px}
+  .hero .svc span{white-space:nowrap}
+  .hero p.lead{color:var(--mist);margin:26px 0 32px}
+  .step-shape{opacity:0;animation:rise .7s ease forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.step-shape{animation:none;opacity:1}}
+
+  /* caminos */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .path{background:var(--surface);border:1px solid var(--line);padding:40px;display:flex;flex-direction:column;gap:14px}
+  .path h3{font-size:1.35rem}
+  .path p{color:var(--muted)}
+  .path .btn{align-self:flex-start;margin-top:8px}
+
+  /* transición: ejes */
+  .ejes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .eje{background:var(--surface);padding:30px 26px}
+  .eje .n{font-size:.75rem;letter-spacing:.2em;color:var(--mid);font-weight:600}
+  .eje h3{font-size:1.08rem;margin:12px 0 8px}
+  .eje p{font-size:.92rem;color:var(--muted)}
+
+  /* cómo trabajo */
+  .method{background:var(--deep);color:#fff}
+  .method h2{color:#fff} .method .eyebrow{color:var(--sky)}
+  .diff{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 44px}
+  .diff div{border-top:1px solid rgba(199,218,226,.35);padding-top:18px}
+  .diff h3{color:#fff;font-size:1.02rem;margin-bottom:6px}
+  .diff p{color:var(--mist);font-weight:300;font-size:.93rem}
+
+  /* sobre mí */
+  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+  .photo{aspect-ratio:4/5;overflow:hidden;position:relative}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+  .photo::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:linear-gradient(90deg,var(--deep),var(--sky))}
+  .about p{color:var(--muted);margin-bottom:1em}
+  .about .lead{font-style:italic}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:28px}
+  .facts h3{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;font-weight:600}
+  .facts ul{font-size:.9rem}
+
+  /* testimonios */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  figure{background:var(--surface);border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+  figure svg{width:34px;height:28px}
+  blockquote{font-weight:300;color:var(--ink)}
+  figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);font-weight:600}
+  figcaption small{display:block;text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400;font-size:.84rem;margin-top:2px}
+  .clients{margin-top:56px;text-align:center}
+  .clients .list{color:var(--deep);font-size:.98rem;line-height:2;max-width:none;margin:0 auto}
+  .clients .list span{white-space:nowrap}
+  .clients .eyebrow{margin-left:auto;margin-right:auto}
+  .clients .sectors{color:var(--muted);font-size:.9rem;margin:12px auto 0}
+
+  /* contacto */
+  .contact{background:var(--deep);color:#fff;text-align:center}
+  .contact h2{color:#fff} .contact .eyebrow{color:var(--sky)}
+  .contact .lead{color:var(--mist);margin:0 auto 40px}
+  .cdata{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 56px;margin-bottom:40px}
+  .cdata div{display:grid;gap:4px}
+  .cdata small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+  .cdata a,.cdata strong{color:#fff;font-weight:500;text-decoration:none}
+  .cdata a:hover{text-decoration:underline}
+  .contact .cta-row{justify-content:center}
+  .booking{background:var(--surface);color:var(--ink);margin:56px auto 0;max-width:1000px;padding:44px 32px 28px;text-align:center;scroll-margin-top:80px}
+  .booking .eyebrow{color:var(--mid)}
+  .booking h3{font-size:clamp(1.3rem,2.6vw,1.7rem);font-weight:400;margin-bottom:10px}
+  .booking-sub{color:var(--muted);margin:0 auto 18px}
+  .booking-alt{font-size:.85rem;color:var(--muted);margin:10px auto 0}
+  @media (max-width:600px){.booking{padding:30px 12px 20px}}
+  footer{background:var(--deeper);color:var(--mid);padding:24px 0;font-size:.78rem;letter-spacing:.06em}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:960px){
+    .links a:not(.btn){display:none}
+    .hero-grid,.two,.about,.paths{grid-template-columns:1fr}
+    .hero-art svg{max-width:320px}
+    .ejes{grid-template-columns:1fr 1fr}
+    .diff,.quotes{grid-template-columns:1fr 1fr}
+    .about .photo{max-width:340px}
+    section{padding:68px 0}
+  }
+  @media (max-width:600px){
+    .ejes,.diff,.quotes,.facts{grid-template-columns:1fr}
+    .path{padding:28px}
+    .hero{padding:60px 0 72px}
+    .logo span{letter-spacing:.16em}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a href="#inicio" class="logo" aria-label="Fany Boggino, inicio">
+        <span class="tile edge" style="width:36px;height:36px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+        <span>Fany Boggino</span>
+      </a>
+      <div class="links">
+        <a href="#liderazgo">Liderazgo</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#transicion">Transición</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#reservar" class="btn light">Reservar cita</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- INICIO -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div class="hero-art">
+        <svg viewBox="0 0 480 300" role="img" aria-label="Ilustración: círculos que se transforman en triángulos y finalmente en una mariposa">
+          <line x1="10" y1="282" x2="230" y2="282" stroke="#6e858b" stroke-width="1.5"/>
+          <g class="step-shape" style="animation-delay:.05s"><circle cx="26" cy="270" r="9" fill="#5f767c"/></g>
+          <g class="step-shape" style="animation-delay:.15s"><circle cx="46" cy="270" r="10" fill="#6b8389"/></g>
+          <g class="step-shape" style="animation-delay:.25s"><circle cx="68" cy="270" r="10.5" fill="#748e95"/></g>
+          <g class="step-shape" style="animation-delay:.35s"><circle cx="91" cy="269" r="11" fill="#7e9aa2"/></g>
+          <g class="step-shape" style="animation-delay:.45s"><circle cx="115" cy="268" r="12" fill="#87a7b1"/></g>
+          <g class="step-shape" style="animation-delay:.6s"><polygon points="140,262 160,252 146,274" fill="#9bbfcb"/></g>
+          <g class="step-shape" style="animation-delay:.75s"><polygon points="166,232 180,214 186,240" fill="#9bbfcb"/></g>
+          <g class="step-shape" style="animation-delay:.9s"><polygon points="190,198 218,180 214,212" fill="#b3cfd8"/></g>
+          <g class="step-shape" style="animation-delay:1.05s"><polygon points="212,160 242,154 226,184" fill="#c7dae2"/></g>
+          <g class="step-shape" style="animation-delay:1.2s"><polygon points="246,108 280,126 252,146" fill="#e6eff2"/></g>
+          <g class="step-shape" style="animation-delay:1.45s">
+            <polygon points="300,24 380,70 340,78" fill="#f2f6f8"/>
+            <polygon points="438,0 384,68 424,70" fill="#f2f6f8"/>
+            <polygon points="334,84 378,76 358,130" fill="#9bbfcb"/>
+            <polygon points="384,76 426,74 414,124" fill="#9bbfcb"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <h1>La transformación comienza desde dentro</h1>
+        <div class="rule"></div>
+        <div class="name">Fany Boggino</div>
+        <div class="svc"><span>Coaching ejecutivo</span> · <span>Liderazgo</span> · <span>Assessment</span> · <span>Transición profesional</span></div>
+        <p class="lead">Acompaño a personas y organizaciones en los momentos que importan: cuando hay que liderar distinto, evaluar con rigor o empezar una nueva etapa profesional. Desde Barcelona, en presencial y online.</p>
+        <div class="cta-row">
+          <a href="#reservar" class="btn light">Reservar primera conversación</a>
+          <a href="#empresas" class="btn ghost-light">Ver cómo trabajo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOS CAMINOS -->
+  <section>
+    <div class="wrap paths">
+      <div class="path" id="empresas">
+        <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+        <p class="eyebrow" style="margin:0">Para empresas</p>
+        <h3>Impulsando el ciclo del talento</h3>
+        <p>Diseño contigo programas de liderazgo, procesos de assessment y acompañamiento en transiciones para que vuestro equipo crezca, se evalúe con criterio y viva los cambios con cuidado. Cada propuesta parte de vuestro reto, no de un catálogo.</p>
+        <a class="btn" href="#liderazgo">Ver servicios para empresas</a>
+      </div>
+      <div class="path" id="profesionales">
+        <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+        <p class="eyebrow" style="margin:0">Para profesionales</p>
+        <h3>Transformando transiciones en oportunidades</h3>
+        <p>Sé que un cambio profesional mueve muchas cosas. Por eso empezamos poniendo orden dentro antes de salir al mercado. Te acompaño a definir tu siguiente paso con claridad y a darlo con confianza.</p>
+        <a class="btn ghost" href="#transicion">Ver acompañamiento de carrera</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIDERAZGO -->
+  <section class="band-white" id="liderazgo">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Liderazgo y coaching ejecutivo</p>
+        <h2>Liderar desde la confianza, no desde el control</h2>
+        <p class="lead">Mis programas son experiencias vivas. Trabajan las habilidades y, sobre todo, la mirada interna desde la que cada persona lidera.</p>
+      </div>
+      <div class="two">
+        <div>
+          <h3 style="font-size:1.2rem;margin-bottom:16px">Programas de liderazgo</h3>
+          <ul class="clean">
+            <li>Autoconciencia y bienestar emocional</li>
+            <li>Comunicación consciente y conversaciones de alto impacto</li>
+            <li>Decisiones enfocadas, valientes y coherentes</li>
+            <li>Gestión del cambio y resiliencia</li>
+            <li>Motivación y equipos autónomos y comprometidos</li>
+          </ul>
+          <p style="margin-top:16px;color:var(--muted)">Presencial u online, para equipos, grupos de mandos o comités de dirección.</p>
+          <div class="tags"><span>Insights Discovery®</span><span>MBTI</span></div>
+        </div>
+        <div>
+          <h3 style="font-size:1.2rem;margin-bottom:16px">Coaching ejecutivo</h3>
+          <p style="color:var(--muted);margin-bottom:12px">Un espacio individual para cambios reales y sostenibles. Trabajamos:</p>
+          <ul class="clean">
+            <li>Propósito, valores y motivaciones</li>
+            <li>Comunicación más clara, humana y estratégica</li>
+            <li>Gestión de emociones, conflictos y desafíos con equilibrio</li>
+            <li>Presencia ejecutiva e influencia</li>
+            <li>Nuevas formas de liderar, decidir y relacionarse</li>
+          </ul>
+          <div class="tags"><span>Coach certificada ICF · ACC</span></div>
+        </div>
+      </div>
+      <p class="note">El impacto que buscamos: líderes que inspiran, equipos que confían y culturas que evolucionan desde dentro.</p>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT -->
+  <section class="band-agua" id="assessment">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Evaluación del talento</p>
+        <h2>Decidir con criterio sobre las personas</h2>
+        <p class="lead" style="margin-bottom:14px">Diseño y facilito procesos de evaluación desde 2006, para selección externa y promoción interna.</p>
+        <p style="color:var(--muted)">Cada proceso se adapta al puesto y a vuestra cultura. El resultado es una visión clara y bien argumentada de cada persona, útil para decidir y también para su desarrollo.</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);padding:34px">
+        <h3 style="font-size:1.1rem;margin-bottom:16px">Qué incluye</h3>
+        <ul class="clean">
+          <li>Assessment Centers grupales</li>
+          <li>Entrevistas por competencias</li>
+          <li>Dinámicas de grupo y role plays</li>
+          <li>Pruebas psicométricas</li>
+          <li>Informes ejecutivos de evaluación</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSICIÓN -->
+  <section class="band-white" id="transicion">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Newplacement · Outplacement · Orientación de carrera</p>
+        <h2>Cada transición es una oportunidad</h2>
+        <p class="lead">Para empresas que quieren cuidar a quienes salen y para profesionales que buscan su siguiente paso. El camino recorre cuatro ejes, a tu ritmo.</p>
+      </div>
+      <div class="ejes">
+        <div class="eje"><span class="n">01</span><h3>Mindset y claridad</h3><p>Gestión emocional y cierre de etapa. Síndrome del impostor, habilidades transferibles y metas alineadas con tu propósito.</p></div>
+        <div class="eje"><span class="n">02</span><h3>Marketing personal</h3><p>Tu narrativa y propuesta de valor. LinkedIn, CV de alto impacto y visibilidad.</p></div>
+        <div class="eje"><span class="n">03</span><h3>Networking estratégico</h3><p>Mapa de contactos, acceso al mercado oculto, entrevistas informativas y social selling.</p></div>
+        <div class="eje"><span class="n">04</span><h3>Entrenamiento y acción</h3><p>Simulación de entrevistas, negociación salarial y acompañamiento en la incorporación con un plan de 90 días.</p></div>
+      </div>
+      <p class="note">Para empresas, también acompaño la jubilación con <em>retirement coaching</em>: una transición vital con propósito y legado.</p>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJO -->
+  <section class="method" id="como-trabajo">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Cómo trabajo</p>
+        <h2>No solo gestiono procesos, acompaño personas</h2>
+      </div>
+      <div class="diff">
+        <div><h3>Diagnóstico con base</h3><p>Formación en Psicopedagogía y RRHH, certificación ICF y MBTI. Rigor y ética en cada paso.</p></div>
+        <div><h3>Tecnología e IA al servicio de las personas</h3><p>Uso IA en el diagnóstico, el diseño, la facilitación y el seguimiento. Procesos prácticos y medibles; el criterio y la relación siguen siendo humanos.</p></div>
+        <div><h3>Experiencia en casos complejos</h3><p>Más de 20 años en consultoras de RRHH, con perfiles directivos y técnicos de alta complejidad.</p></div>
+        <div><h3>Mercado real</h3><p>Conozco a fondo el mercado laboral. Las estrategias que diseñamos son realistas.</p></div>
+        <div><h3>Relaciones de valor</h3><p>Networking estratégico para abrir puertas que no aparecen en los portales de empleo.</p></div>
+        <div><h3>Cercanía honesta</h3><p>Un acompañamiento cercano y también retador, en un espacio seguro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="band-piedra" id="sobre-mi">
+    <div class="wrap about">
+      <div class="photo"><img src="fany.jpg" alt="Fany Boggino, coach ejecutiva" width="640" height="800"></div>
+      <div>
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Hola, soy Fany</h2>
+        <p class="lead">Me guían la curiosidad y la generosidad. La claridad me la dan la familia, el mar y la naturaleza.</p>
+        <p>Llevo más de 20 años en Recursos Humanos, siempre dentro de consultoras. He diseñado y facilitado programas de liderazgo, procesos de assessment y transiciones de carrera para organizaciones de sectores muy distintos. En 2026 inicio mi proyecto propio para hacerlo a mi manera: cerca de cada persona y con método.</p>
+        <p>Hoy colaboro además como consultora de outplacement ejecutivo con Randstad y como coach en thePower.</p>
+        <p>Quienes han trabajado conmigo destacan mi empatía, mi paciencia y la energía que aporto en momentos de incertidumbre.</p>
+        <div class="facts">
+          <div><h3>Formación</h3><ul class="clean">
+            <li>Licenciada en Psicopedagogía, Universidad del Salvador</li>
+            <li>Postgrado en Gestión de RRHH, URL</li>
+            <li>Programa en Gestión del Personal, EADA</li></ul></div>
+          <div><h3>Certificaciones</h3><ul class="clean">
+            <li>ICF Associate Certified Coach (ACC)</li>
+            <li>MBTI</li>
+            <li>Insights Discovery®</li></ul></div>
+          <div><h3>Idiomas</h3><ul class="clean">
+            <li>Español y catalán</li>
+            <li>Inglés</li>
+            <li>Francés</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="band-white" id="testimonios">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Testimonios</p>
+        <h2>Lo que cuentan quienes han hecho el camino</h2>
+      </div>
+      <div class="quotes">
+        <figure>
+          <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+          <blockquote>Su paciencia, dedicación y capacidad para generar confianza marcaron la diferencia. Con Insights, el equipo aprendió a comprenderse mejor, a nivel individual y colectivo, y mejoró su forma de trabajar.</blockquote>
+          <figcaption>H.Essers<small>Programa de liderazgo</small></figcaption>
+        </figure>
+        <figure>
+          <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+          <blockquote>Un programa excepcional, que combina el factor humano con una metodología sólida. Su cercanía fue clave para gestionar los miedos y sostener una transición compleja. Recomendable al 100%.</blockquote>
+          <figcaption>Oriol Gol<small>Programa de outplacement</small></figcaption>
+        </figure>
+        <figure>
+          <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+          <blockquote>Me permitió redescubrirme y recuperar mi fuerza en un momento desafiante, y avanzar con claridad y confianza.</blockquote>
+          <figcaption>Vanessa Ferreira<small>Acompañamiento de carrera</small></figcaption>
+        </figure>
+      </div>
+      <div class="clients">
+        <p class="eyebrow">Organizaciones con las que he colaborado</p>
+        <p class="list"><span>Nestlé</span> · <span>Abertis</span> · <span>Allianz</span> · <span>Lacoste</span> · <span>Bidfood</span> · <span>Esade</span> · <span>CaixaBank</span> · <span>Nissan</span> · <span>Diesel</span> · <span>Takeda</span> · <span>Merck</span> · <span>ISDIN</span> · <span>Coty</span> · <span>H.Essers</span> · <span>Agbar</span> · <span>ABB</span> · <span>Booking.com</span> · <span>Hitachi</span> · <span>Werfen</span> · <span>La Fageda</span> · <span>Rubió</span> · <span>Cisco</span> · <span>Yamaha</span> · <span>Syneos Health</span> · <span>Medtronic</span></p>
+        <p class="sectors">Industria, farma y salud, banca y seguros, consumo, tecnología, logística y educación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <p class="eyebrow">Contacto</p>
+      <h2>¿Conversamos?</h2>
+      <p class="lead">Cuéntame en qué momento estás tú o tu equipo. La primera conversación sirve para entendernos y ver si puedo acompañaros.</p>
+      <div class="cdata">
+        <div><small>Email</small><a href="mailto:fb@fanyboggino.com">fb@fanyboggino.com</a></div>
+        <div><small>Teléfono</small><a href="tel:+34652629450">652 629 450</a></div>
+        <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/fanyboggino/" target="_blank" rel="noopener">linkedin.com/in/fanyboggino</a></div>
+        <div><small>Dónde</small><strong>Barcelona · presencial y online</strong></div>
+      </div>
+      <div class="cta-row">
+        <a href="#reservar" class="btn light">Reservar primera conversación</a>
+        <a href="mailto:fb@fanyboggino.com?subject=Primera%20conversaci%C3%B3n" class="btn ghost-light">Escribirme un email</a>
+      </div>
+      <div class="booking" id="reservar">
+        <p class="eyebrow">Agenda</p>
+        <h3>Reserva tu primera conversación</h3>
+        <p class="booking-sub">Elige el día y la hora que mejor te vengan. Es una conversación sin compromiso para entender tu situación y ver cómo puedo acompañarte.</p>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/fb-fanyboggino/primera-conversacion?hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=22353b&amp;primary_color=2f4a52" style="min-width:300px;height:720px;"></div>
+        <p class="booking-alt">¿No se carga la agenda? <a href="https://calendly.com/fb-fanyboggino/primera-conversacion" target="_blank" rel="noopener">Ábrela en una pestaña nueva</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span style="display:flex;align-items:center;gap:12px"><span class="tile edge" style="width:28px;height:28px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>© 2026 Fany Boggino · La transformación comienza desde dentro</span>
+    <span>Barcelona · Presencial y online</span>
+  </div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
