@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fany Boggino · Coaching ejecutivo, liderazgo, assessment y transición profesional</title>
-<meta name="description" content="Fany Boggino, coach ejecutiva ICF ACC en Barcelona. Programas de liderazgo, coaching ejecutivo, assessment y transición profesional (outplacement y newplacement) para empresas y profesionales.">
+<title>Fany Boggino · Coaching ejecutivo, liderazgo, assessment, transición profesional y orientación vocacional</title>
+<meta name="description" content="Fany Boggino, coach ejecutiva ICF ACC en Barcelona. Programas de liderazgo, coaching ejecutivo, assessment y transición profesional (outplacement y newplacement) para empresas y profesionales. Orientación vocacional para jóvenes de 14 a 18 años y sus familias.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232f4a52'/%3E%3Cg transform='translate(14 18) scale(.6)'%3E%3Cpolygon points='58,50 6,8 18,52' fill='%23f3f6f9'/%3E%3Cpolygon points='62,50 114,8 102,52' fill='%23f3f6f9'/%3E%3Cpolygon points='58,54 22,58 36,92' fill='%239bbfcb'/%3E%3Cpolygon points='62,54 98,58 84,92' fill='%239bbfcb'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,11 +77,11 @@
   @media (prefers-reduced-motion:reduce){.step-shape{animation:none;opacity:1}}
 
   /* caminos */
-  .paths{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .path{background:var(--surface);border:1px solid var(--line);padding:40px;display:flex;flex-direction:column;gap:14px}
+  .paths{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .path{background:var(--surface);border:1px solid var(--line);padding:36px 32px;display:flex;flex-direction:column;gap:14px}
   .path h3{font-size:1.35rem}
   .path p{color:var(--muted)}
-  .path .btn{align-self:flex-start;margin-top:8px}
+  .path .btn{align-self:flex-start;margin-top:auto}
 
   /* transición: ejes */
   .ejes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -110,8 +110,9 @@
   .facts ul{font-size:.9rem}
 
   /* testimonios */
-  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  figure{background:var(--surface);border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  figure{background:var(--surface);border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;justify-content:flex-start;gap:22px}
+  figure figcaption{margin-top:auto}
   figure svg{width:34px;height:28px}
   blockquote{font-weight:300;color:var(--ink)}
   figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);font-weight:600}
@@ -138,6 +139,34 @@
   .booking-sub{color:var(--muted);margin:0 auto 18px}
   .booking-alt{font-size:.85rem;color:var(--muted);margin:10px auto 0}
   @media (max-width:600px){.booking{padding:30px 12px 20px}}
+
+  /* orientación vocacional */
+  .voc-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:56px}
+  .voc-pillars div{border-top:1px solid var(--deep);padding-top:16px}
+  .voc-pillars .eyebrow{margin-bottom:.5em}
+  .voc-pillars h3{font-size:1.05rem;margin-bottom:6px}
+  .voc-pillars p{font-size:.92rem;color:var(--muted)}
+  .voc-moments{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px}
+  .voc-moments div{background:var(--surface);border:1px solid var(--line);padding:28px 26px}
+  .voc-moments .eyebrow{margin-bottom:.6em}
+  .voc-moments h3{font-size:1.08rem;margin-bottom:8px}
+  .voc-moments p{font-size:.92rem;color:var(--muted)}
+  .voc-sub{font-size:1.2rem;margin:0 0 20px}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;counter-reset:st;margin-bottom:56px}
+  .steps li{counter-increment:st;border-top:2px solid var(--deep);padding-top:14px}
+  .steps li::before{content:counter(st);display:block;font-size:.75rem;letter-spacing:.2em;font-weight:600;color:var(--mid);margin-bottom:6px}
+  .steps h3{font-size:1rem;margin-bottom:6px}
+  .steps p{font-size:.9rem;color:var(--muted)}
+  .compare-wrap{overflow-x:auto}
+  .compare{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);font-size:.93rem;min-width:520px}
+  .compare th{text-align:left;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:16px 22px;color:var(--mid);border-bottom:1px solid var(--line)}
+  .compare th.mine{color:var(--deep)}
+  .compare td{padding:14px 22px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted)}
+  .compare td.mine{color:var(--ink);background:#f7fafb}
+  .compare td strong{display:block;color:var(--deep);font-weight:500}
+  .voc-quote{margin-top:48px;background:var(--surface);border:1px solid var(--line);padding:34px 32px;display:grid;gap:14px}
+  @media (max-width:960px){.paths{grid-template-columns:1fr}.voc-pillars,.voc-moments,.steps{grid-template-columns:1fr}}
+  @media (min-width:600px) and (max-width:960px){.steps{grid-template-columns:1fr 1fr}}
   footer{background:var(--deeper);color:var(--mid);padding:24px 0;font-size:.78rem;letter-spacing:.06em}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
@@ -146,7 +175,7 @@
     .hero-grid,.two,.about,.paths{grid-template-columns:1fr}
     .hero-art svg{max-width:320px}
     .ejes{grid-template-columns:1fr 1fr}
-    .diff,.quotes{grid-template-columns:1fr 1fr}
+    .diff{grid-template-columns:1fr 1fr}
     .about .photo{max-width:340px}
     section{padding:68px 0}
   }
@@ -168,9 +197,10 @@
         <span>Fany Boggino</span>
       </a>
       <div class="links">
+        <a href="#transicion">Transición</a>
         <a href="#liderazgo">Liderazgo</a>
         <a href="#assessment">Assessment</a>
-        <a href="#transicion">Transición</a>
+        <a href="#vocacional">Orientación vocacional</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#reservar" class="btn light">Reservar cita</a>
       </div>
@@ -207,8 +237,8 @@
         <h1>La transformación comienza desde dentro</h1>
         <div class="rule"></div>
         <div class="name">Fany Boggino</div>
-        <div class="svc"><span>Coaching ejecutivo</span> · <span>Liderazgo</span> · <span>Assessment</span> · <span>Transición profesional</span></div>
-        <p class="lead">Acompaño a personas y organizaciones en los momentos que importan: cuando hay que liderar distinto, evaluar con rigor o empezar una nueva etapa profesional. Desde Barcelona, en presencial y online.</p>
+        <div class="svc"><span>Transición profesional</span> · <span>Coaching ejecutivo</span> · <span>Liderazgo</span> · <span>Assessment</span> · <span>Orientación vocacional</span></div>
+        <p class="lead">Acompaño a personas y organizaciones en los momentos que importan: cuando hay que empezar una nueva etapa profesional, liderar distinto o evaluar con rigor. Desde Barcelona, en presencial y online.</p>
         <div class="cta-row">
           <a href="#reservar" class="btn light">Reservar primera conversación</a>
           <a href="#empresas" class="btn ghost-light">Ver cómo trabajo</a>
@@ -220,25 +250,78 @@
   <!-- DOS CAMINOS -->
   <section>
     <div class="wrap paths">
-      <div class="path" id="empresas">
-        <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
-        <p class="eyebrow" style="margin:0">Para empresas</p>
-        <h3>Impulsando el ciclo del talento</h3>
-        <p>Diseño contigo programas de liderazgo, procesos de assessment y acompañamiento en transiciones para que vuestro equipo crezca, se evalúe con criterio y viva los cambios con cuidado. Cada propuesta parte de vuestro reto, no de un catálogo.</p>
-        <a class="btn" href="#liderazgo">Ver servicios para empresas</a>
-      </div>
       <div class="path" id="profesionales">
         <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
         <p class="eyebrow" style="margin:0">Para profesionales</p>
         <h3>Transformando transiciones en oportunidades</h3>
         <p>Sé que un cambio profesional mueve muchas cosas. Por eso empezamos poniendo orden dentro antes de salir al mercado. Te acompaño a definir tu siguiente paso con claridad y a darlo con confianza.</p>
-        <a class="btn ghost" href="#transicion">Ver acompañamiento de carrera</a>
+        <a class="btn" href="#transicion">Ver acompañamiento de carrera</a>
+      </div>
+      <div class="path" id="empresas">
+        <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+        <p class="eyebrow" style="margin:0">Para empresas</p>
+        <h3>Impulsando el ciclo del talento</h3>
+        <p>Acompaño las transiciones de vuestro equipo con cuidado y diseño programas de liderazgo y procesos de assessment para que crezca y se evalúe con criterio. Cada propuesta parte de vuestro reto, no de un catálogo.</p>
+        <a class="btn ghost" href="#transicion">Ver servicios para empresas</a>
+      </div>
+      <div class="path" id="familias">
+        <span class="tile" style="width:48px;height:48px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+        <p class="eyebrow" style="margin:0">Para jóvenes y familias</p>
+        <h3>Encontrar el siguiente paso con claridad</h3>
+        <p>Orientación vocacional para jóvenes de 14 a 18 años, de 3º de ESO a Bachillerato y FP. Un proceso ágil para que tu hijo o hija no elija su futuro a ciegas, y la conversación en casa sea más tranquila.</p>
+        <a class="btn ghost" href="#vocacional">Ver orientación vocacional</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSICIÓN -->
+  <section class="band-white" id="transicion">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Newplacement · Outplacement · Orientación de carrera</p>
+        <h2>Cada transición es una oportunidad</h2>
+        <p class="lead">Sé que un cambio profesional mueve muchas cosas. Por eso empezamos poniendo orden dentro y después salimos al mercado con estrategia, con tecnología y con las relaciones adecuadas. El objetivo: una transición más consciente, más positiva y más rápida.</p>
+      </div>
+
+      <div class="voc-pillars">
+        <div><p class="eyebrow">Claridad primero</p><h3>Sabes qué buscas y qué ofreces</h3><p>Antes de mover el CV, definimos tu propuesta de valor y el tipo de proyecto que de verdad encaja contigo. Así cada paso suma y no se pierde energía.</p></div>
+        <div><p class="eyebrow">Oportunidades reales</p><h3>Más allá de los portales de empleo</h3><p>Te ayudo a abrir conversaciones con las personas que deciden. Se estima que entre el 75 y el 80 % de los puestos de alto nivel nunca se publican: ahí está buena parte del mercado.</p></div>
+        <div><p class="eyebrow">Tecnología e IA a tu favor</p><h3>Un proceso ágil, actual y medible</h3><p>Uso IA para analizar el mercado, afinar tu perfil y preparar cada contacto y cada entrevista. Ganas tiempo y foco; el criterio y la relación siguen siendo humanos.</p></div>
+      </div>
+
+      <h3 class="voc-sub">Cuatro ejes, a tu ritmo</h3>
+      <div class="ejes" style="margin-bottom:56px">
+        <div class="eje"><span class="n">01</span><h3>Mindset y claridad</h3><p>Gestión emocional y cierre de etapa. Síndrome del impostor, habilidades transferibles y metas alineadas con tu propósito.</p></div>
+        <div class="eje"><span class="n">02</span><h3>Marketing personal</h3><p>Tu narrativa y propuesta única de valor. LinkedIn, CV de alto impacto y visibilidad.</p></div>
+        <div class="eje"><span class="n">03</span><h3>Networking estratégico</h3><p>Mapa de contactos, acceso al mercado oculto, entrevistas informativas y social selling.</p></div>
+        <div class="eje"><span class="n">04</span><h3>Entrenamiento y acción</h3><p>Simulación de entrevistas, negociación salarial y acompañamiento en la incorporación con un plan de 90 días.</p></div>
+      </div>
+
+      <div class="two" style="margin-bottom:8px">
+        <div>
+          <h3 class="voc-sub">Lo que te llevas</h3>
+          <ul class="clean">
+            <li>Claridad sobre tu siguiente paso y un relato profesional que se entiende a la primera</li>
+            <li>Un plan de búsqueda activo, con empresas y personas concretas</li>
+            <li>Más conversaciones con quien decide, y entrevistas mejor preparadas</li>
+            <li>Acompañamiento cercano en los momentos de duda y también en la negociación</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="voc-sub">Experiencia que se nota</h3>
+          <p style="color:var(--muted);margin-bottom:12px">Llevo más de 13 años acompañando transiciones de perfiles directivos y técnicos de alta complejidad, y antes trabajé como headhunter. Conozco el proceso desde los dos lados de la mesa.</p>
+          <p style="color:var(--muted)">Para empresas, una salida cuidada protege a la persona, a quienes se quedan y a vuestra marca empleadora. También acompaño la jubilación con <em>retirement coaching</em>: una transición vital con propósito y legado.</p>
+        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:40px">
+        <a href="#reservar" class="btn">Reservar primera conversación</a>
       </div>
     </div>
   </section>
 
   <!-- LIDERAZGO -->
-  <section class="band-white" id="liderazgo">
+  <section class="band-agua" id="liderazgo">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Liderazgo y coaching ejecutivo</p>
@@ -276,7 +359,7 @@
   </section>
 
   <!-- ASSESSMENT -->
-  <section class="band-agua" id="assessment">
+  <section class="band-white" id="assessment">
     <div class="wrap two">
       <div>
         <p class="eyebrow">Evaluación del talento</p>
@@ -297,21 +380,57 @@
     </div>
   </section>
 
-  <!-- TRANSICIÓN -->
-  <section class="band-white" id="transicion">
+
+  <!-- ORIENTACIÓN VOCACIONAL -->
+  <section class="band-agua" id="vocacional">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Newplacement · Outplacement · Orientación de carrera</p>
-        <h2>Cada transición es una oportunidad</h2>
-        <p class="lead">Para empresas que quieren cuidar a quienes salen y para profesionales que buscan su siguiente paso. El camino recorre cuatro ejes, a tu ritmo.</p>
+        <p class="eyebrow">Orientación vocacional para futuros líderes · De 3º de ESO a Bachillerato y FP</p>
+        <h2>Encontrar el siguiente paso con claridad</h2>
+        <p class="lead">Un acompañamiento académico y profesional para jóvenes de 14 a 18 años y sus familias. Para decidir con seguridad y abrir con claridad las puertas de su mañana.</p>
       </div>
-      <div class="ejes">
-        <div class="eje"><span class="n">01</span><h3>Mindset y claridad</h3><p>Gestión emocional y cierre de etapa. Síndrome del impostor, habilidades transferibles y metas alineadas con tu propósito.</p></div>
-        <div class="eje"><span class="n">02</span><h3>Marketing personal</h3><p>Tu narrativa y propuesta de valor. LinkedIn, CV de alto impacto y visibilidad.</p></div>
-        <div class="eje"><span class="n">03</span><h3>Networking estratégico</h3><p>Mapa de contactos, acceso al mercado oculto, entrevistas informativas y social selling.</p></div>
-        <div class="eje"><span class="n">04</span><h3>Entrenamiento y acción</h3><p>Simulación de entrevistas, negociación salarial y acompañamiento en la incorporación con un plan de 90 días.</p></div>
+
+      <div class="voc-pillars">
+        <div><p class="eyebrow">Mundo profesional</p><h3>Conozco el mundo laboral por dentro</h3><p>Más de 20 años en recursos humanos y selección, 15 de ellos en Randstad.</p></div>
+        <div><p class="eyebrow">Mirada humana</p><h3>Sé lo que se vive en casa con un adolescente</h3><p>Madre de dos adolescentes, psicopedagoga y coach ICF.</p></div>
+        <div><p class="eyebrow">Tecnología y agilidad</p><h3>Un proceso ágil, apoyado en tecnología</h3><p>Formularios online, datos al día e informe en semanas, revisado por mí.</p></div>
       </div>
-      <p class="note">Para empresas, también acompaño la jubilación con <em>retirement coaching</em>: una transición vital con propósito y legado.</p>
+
+      <h3 class="voc-sub">Cada curso tiene su momento</h3>
+      <div class="voc-moments">
+        <div><p class="eyebrow">ESO</p><h3>La rama del curso que viene</h3><p>Bachillerato, ciclo formativo u optativas.</p></div>
+        <div><p class="eyebrow">Bachillerato y FP</p><h3>Qué estudiar después</h3><p>Grado superior o universidad, con sus notas de corte y pasarelas.</p></div>
+        <div><p class="eyebrow">En cualquier curso</p><h3>«No sé qué elegir»</h3><p>Es muy habitual y un buen punto de partida.</p></div>
+      </div>
+
+      <h3 class="voc-sub">Cinco pasos, de 1 a 4 semanas</h3>
+      <ol class="steps">
+        <li><h3>Llamada inicial</h3><p>20 minutos con la familia, gratis.</p></li>
+        <li><h3>Primeras pistas</h3><p>Quién es, qué le ilusiona y cómo le ven.</p></li>
+        <li><h3>Cuatro etapas online</h3><p>15-20 minutos cada una, desde el móvil.</p></li>
+        <li><h3>Informe personal</h3><p>Intereses, fortalezas y opciones, con datos reales.</p></li>
+        <li><h3>Puesta en común</h3><p>Con el alumno y la familia: decisiones y próximos pasos.</p></li>
+      </ol>
+
+      <h3 class="voc-sub">Una orientación pensada para hoy</h3>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col">Lo habitual: un test</th><th scope="col" class="mine">Mi enfoque: un proceso</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Foto fija</strong>Un test en un solo día</td><td class="mine"><strong>A su ritmo</strong>Cuatro etapas online, sin presión</td></tr>
+            <tr><td><strong>Mirada académica</strong>Qué estudiar</td><td class="mine"><strong>Mirada de futuro</strong>Qué salidas tiene cada camino</td></tr>
+            <tr><td><strong>Casi solo universidad</strong>Lo demás, como segunda opción</td><td class="mine"><strong>Todos los caminos</strong>FP, diseño, tecnología y universidad, con pasarelas</td></tr>
+            <tr><td><strong>Una sola voz</strong>Lo que dice de sí mismo</td><td class="mine"><strong>Cómo le ven</strong>Varias personas cercanas aportan su mirada</td></tr>
+            <tr><td><strong>Un resultado</strong>Le dicen qué carrera le encaja</td><td class="mine"><strong>Aprende a decidir</strong>Una foto con preguntas; la decisión es suya</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="cta-row" style="margin-top:40px">
+        <a href="#reservar" class="btn">Reservar llamada gratuita de 20 min</a>
+        <a href="mailto:fb@fanyboggino.com?subject=Orientaci%C3%B3n%20vocacional" class="btn ghost">Escribirme un email</a>
+      </div>
     </div>
   </section>
 
@@ -373,17 +492,22 @@
         <figure>
           <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
           <blockquote>Su paciencia, dedicación y capacidad para generar confianza marcaron la diferencia. Con Insights, el equipo aprendió a comprenderse mejor, a nivel individual y colectivo, y mejoró su forma de trabajar.</blockquote>
-          <figcaption>H.Essers<small>Programa de liderazgo</small></figcaption>
+          <figcaption>H. E.<small>Programa de liderazgo</small></figcaption>
         </figure>
         <figure>
           <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
           <blockquote>Un programa excepcional, que combina el factor humano con una metodología sólida. Su cercanía fue clave para gestionar los miedos y sostener una transición compleja. Recomendable al 100%.</blockquote>
-          <figcaption>Oriol Gol<small>Programa de outplacement</small></figcaption>
+          <figcaption>O. G.<small>Programa de outplacement</small></figcaption>
         </figure>
         <figure>
           <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
           <blockquote>Me permitió redescubrirme y recuperar mi fuerza en un momento desafiante, y avanzar con claridad y confianza.</blockquote>
-          <figcaption>Vanessa Ferreira<small>Acompañamiento de carrera</small></figcaption>
+          <figcaption>V. F.<small>Acompañamiento de carrera</small></figcaption>
+        </figure>
+        <figure>
+          <span class="tile" style="width:44px;height:44px" aria-hidden="true"><svg viewBox="0 0 120 100"><polygon points="58,50 6,8 18,52" fill="#f3f6f9"/><polygon points="62,50 114,8 102,52" fill="#f3f6f9"/><polygon points="58,54 22,58 36,92" fill="#9bbfcb"/><polygon points="62,54 98,58 84,92" fill="#9bbfcb"/></svg></span>
+          <blockquote>Sinceramente, abordar el futuro de mi hijo nos daba mucha pereza y vértigo a partes iguales. Trabajar con Fany ha sido un acierto total: un método dinámico que no se le ha hecho nada pesado a mi hijo, le ha dado claridad y un plan de acción concreto. Nos ha puesto las pilas a todos y ahora avanzamos con tranquilidad.</blockquote>
+          <figcaption>Familia de un alumno de 17 años<small>Orientación vocacional</small></figcaption>
         </figure>
       </div>
       <div class="clients">
